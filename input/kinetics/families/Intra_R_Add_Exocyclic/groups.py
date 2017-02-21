@@ -3255,8 +3255,8 @@ entry(
     label = "Rn4c6_alpha",
     group = 
 """
-1  *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2  *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1  *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2  *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3     R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4     R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5     R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
@@ -3270,35 +3270,35 @@ entry(
 )
 
 entry(
-    index = 342,
-    label = "Rn4c6_alpha_benzene",
+    index = 380,
+    label = "Rn4c6ben_alpha",
     group = 
 """
-1  *2 C u0 {2,D} {6,S}
-2  *3 C u0 {1,D} {3,S}
-3     C u0 {2,S} {4,D}
-4     C u0 {3,D} {5,S}
-5     C u0 {4,S} {6,D}
-6  *5 C u0 {5,D} {1,S} {7,[S,D,T,B]}
-7  *7 C u0 {6,[S,D,T,B]} {8,[S,D,T,B]}
-8  *6 C u0 {7,[S,D,T,B]} {9,[S,D,T,B]}
-9  *4 C u0 {8,[S,D,T,B]} {10,[S,D,T,B]}
-10 *1 C u1 {9,[S,D,T,B]}
+1  *2 C u0 {2,B} {6,B}
+2  *3 C u0 {1,B} {3,B}
+3     C u0 {2,B} {4,B}
+4     C u0 {3,B} {5,B}
+5     C u0 {4,B} {6,B}
+6  *5 C u0 {5,B} {1,B} {7,[S,D,T,B]}
+7  *7 R!H u0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8  *6 R!H u0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9  *4 R!H u0 {8,[S,D,T,B]} {10,[S,D,T,B]}
+10 *1 R!H u1 {9,[S,D,T,B]}
 """,
     kinetics = None,
 )
 
 entry(
-    index = 343,
-    label = "Rn4c6_alpha_benzene_Cdchain",
+    index = 381,
+    label = "Rn4(DSDS)c6ben_alpha",
     group = 
 """
-1  *2 C u0 {2,D} {6,S}
-2  *3 C u0 {1,D} {3,S}
-3     C u0 {2,S} {4,D}
-4     C u0 {3,D} {5,S}
-5     C u0 {4,S} {6,D}
-6  *5 C u0 {5,D} {1,S} {7,S}
+1  *2 C u0 {2,B} {6,B}
+2  *3 C u0 {1,B} {3,B}
+3     C u0 {2,B} {4,B}
+4     C u0 {3,B} {5,B}
+5     C u0 {4,B} {6,B}
+6  *5 C u0 {5,B} {1,B} {7,S}
 7  *7 C u0 {6,S} {8,D}
 8  *6 C u0 {7,D} {9,S}
 9  *4 C u0 {8,S} {10,D}
@@ -3312,8 +3312,8 @@ entry(
     label = "Rn3c6_alpha",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5    R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
@@ -3324,13 +3324,32 @@ entry(
 """,
     kinetics = None,
 )
+
+entry(
+    index = 382,
+    label = "Rn3c6ben_alpha",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5    C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B} {7,[S,D,T,B]}
+7 *6 R!H u0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8 *4 R!H u0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9 *1 R!H u1 {8,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
 entry(
     index = 286,
     label = "Rn2c6_alpha",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5    R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
@@ -3342,16 +3361,49 @@ entry(
 )
 
 entry(
+    index = 383,
+    label = "Rn2c6ben_alpha",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5    C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B} {7,[S,D,T,B]}
+7 *4 R!H u0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8 *1 R!H u1 {7,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 287,
     label = "Rn1c6_alpha",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5    R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
 6 *4 R!H ux {5,[S,D,T,B]} {1,[S,D,T,B]} {7,[S,D,T,B]}
+7 *1 R!H u1 {6,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 284,
+    label = "Rn1c6ben_alpha",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5    C u0 {4,B} {6,B}
+6 *4 C u0 {5,B} {1,B} {7,[S,D,T,B]}
 7 *1 R!H u1 {6,[S,D,T,B]}
 """,
     kinetics = None,
@@ -3369,8 +3421,8 @@ entry(
     label = "Rn3c6_beta_long",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3 *7 R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]} {7,[S,D,T,B]}
 4 *8 R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *9 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
@@ -3383,12 +3435,30 @@ entry(
 )
 
 entry(
+    index = 385,
+    label = "Rn3c6ben_beta_long",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3 *7 C u0 {2,B} {4,B} {7,[S,D,T,B]}
+4 *8 C u0 {3,B} {5,B}
+5 *9 C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B}
+7 *6 R!H u0 {3,[S,D,T,B]} {8,[S,D,T,B]}
+8 *4 R!H u0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9 *1 R!H u1 {8,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 291,
     label = "Rn2c6_beta_long",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3 *6 R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]} {7,[S,D,T,B]}
 4 *7 R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *8 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
@@ -3400,16 +3470,49 @@ entry(
 )
 
 entry(
+    index = 386,
+    label = "Rn2c6ben_beta_long",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3 *6 C u0 {2,B} {4,B} {7,[S,D,T,B]}
+4 *7 C u0 {3,B} {5,B}
+5 *8 C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B}
+7 *4 R!H u0 {3,[S,D,T,B]} {8,[S,D,T,B]}
+8 *1 R!H u1 {7,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 292,
     label = "Rn1c6_beta_long",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3 *4 R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]} {7,[S,D,T,B]}
 4 *6 R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *7 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
 6 *5 R!H ux {5,[S,D,T,B]} {1,[S,D,T,B]}
+7 *1 R!H u1 {3,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 387,
+    label = "Rn1c6ben_beta_long",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3 *4 C u0 {2,B} {4,B} {7,[S,D,T,B]}
+4 *6 C u0 {3,B} {5,B}
+5 *7 C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B}
 7 *1 R!H u1 {3,[S,D,T,B]}
 """,
     kinetics = None,
@@ -3427,8 +3530,8 @@ entry(
     label = "Rn3c6_beta_short",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *7 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]} {7,[S,D,T,B]}
@@ -3441,12 +3544,30 @@ entry(
 )
 
 entry(
+    index = 388,
+    label = "Rn3c6ben_beta_short",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5 *7 C u0 {4,B} {6,B} {7,[S,D,T,B]}
+6 *5 C u0 {5,B} {1,B}
+7 *6 R!H u0 {5,[S,D,T,B]} {8,[S,D,T,B]}
+8 *4 R!H u0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9 *1 R!H u1 {8,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 295,
     label = "Rn2c6_beta_short",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *6 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]} {7,[S,D,T,B]}
@@ -3458,16 +3579,49 @@ entry(
 )
 
 entry(
+    index = 389,
+    label = "Rn2c6ben_beta_short",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5 *6 C u0 {4,B} {6,B} {7,[S,D,T,B]}
+6 *5 C u0 {5,B} {1,B}
+7 *4 R!H u0 {5,[S,D,T,B]} {8,[S,D,T,B]}
+8 *1 R!H u1 {7,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 296,
     label = "Rn1c6_beta_short",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *4 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]} {7,[S,D,T,B]}
 6 *5 R!H ux {5,[S,D,T,B]} {1,[S,D,T,B]}
+7 *1 R!H u1 {5,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 390,
+    label = "Rn1c6ben_beta_short",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5 *4 C u0 {4,B} {6,B} {7,[S,D,T,B]}
+6 *5 C u0 {5,B} {1,B}
 7 *1 R!H u1 {5,[S,D,T,B]}
 """,
     kinetics = None,
@@ -3485,8 +3639,8 @@ entry(
     label = "Rn2c6_gamma",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4 *6 R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]} {7,[S,D,T,B]}
 5 *7 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
@@ -3498,16 +3652,49 @@ entry(
 )
 
 entry(
+    index = 391,
+    label = "Rn2c6ben_gamma",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4 *6 C u0 {3,B} {5,B} {7,[S,D,T,B]}
+5 *7 C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B}
+7 *4 R!H u0 {4,[S,D,T,B]} {8,[S,D,T,B]}
+8 *1 R!H u1 {7,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 299,
     label = "Rn1c6_gamma",
     group = 
 """
-1 *2 R!H u0 {2,[D,T]} {6,[S,D,T,B]}
-2 *3 R!H u0 {1,[D,T]} {3,[S,D,T,B]}
+1 *2 R!H u0 {2,[D,T,B]} {6,[S,D,T,B]}
+2 *3 R!H u0 {1,[D,T,B]} {3,[S,D,T,B]}
 3    R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4 *4 R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]} {7,[S,D,T,B]}
 5 *6 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
 6 *5 R!H ux {5,[S,D,T,B]} {1,[S,D,T,B]}
+7 *1 R!H u1 {4,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 392,
+    label = "Rn1c6ben_gamma",
+    group =
+"""
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4 *4 C u0 {3,B} {5,B} {7,[S,D,T,B]}
+5 *6 C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B}
 7 *1 R!H u1 {4,[S,D,T,B]}
 """,
     kinetics = None,
@@ -4140,36 +4327,18 @@ entry(
 )
 
 entry(
-    index = 342,
-    label = "Rn3c6b_alpha",
-    group = 
-"""
-1 *2 C u0 {2,D} {6,S}
-2 *3 C u0 {1,D} {3,S}
-3    C ux {2,S} {4,D}
-4    C ux {3,D} {5,S}
-5    C ux {4,S} {6,D}
-6 *5 C ux {5,D} {1,S} {7,[S,D,T,B]}
-7 *6 R!H ux {6,[S,D,T,B]} {8,[S,D,T,B]}
-8 *4 R!H ux {7,[S,D,T,B]} {9,[S,D,T,B]}
-9 *1 R!H u1 {8,[S,D,T,B]}
-""",
-    kinetics = None,
-)
-
-entry(
     index = 343,
-    label = "Rn3(RSS)c6b_alpha",
+    label = "Rn3(RSS)c6ben_alpha",
     group = 
 """
-1 *2 C u0 {2,D} {6,S}
-2 *3 C u0 {1,D} {3,S}
-3    C ux {2,S} {4,D}
-4    C ux {3,D} {5,S}
-5    C ux {4,S} {6,D}
-6 *5 C ux {5,D} {1,S} {7,S}
-7 *6 R!H ux {6,S} {8,S}
-8 *4 R!H ux {7,S} {9,[S,D,T,B]}
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5    C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B} {7,S}
+7 *6 R!H u0 {6,S} {8,S}
+8 *4 R!H u0 {7,S} {9,[S,D,T,B]}
 9 *1 R!H u1 {8,[S,D,T,B]}
 """,
     kinetics = None,
@@ -4593,17 +4762,17 @@ entry(
 
 entry(
     index = 366,
-    label = "Rn3(SDS)c6b_alpha",
+    label = "Rn3(SDS)c6ben_alpha",
     group =
 """
-1 *2 C u0 {2,D} {6,S}
-2 *3 C u0 {1,D} {3,S}
-3    C ux {2,S} {4,D}
-4    C ux {3,D} {5,S}
-5    C ux {4,S} {6,D}
-6 *5 C ux {5,D} {1,S} {7,S}
-7 *6 R!H ux {6,S} {8,D}
-8 *4 R!H ux {7,D} {9,S}
+1 *2 C u0 {2,B} {6,B}
+2 *3 C u0 {1,B} {3,B}
+3    C u0 {2,B} {4,B}
+4    C u0 {3,B} {5,B}
+5    C u0 {4,B} {6,B}
+6 *5 C u0 {5,B} {1,B} {7,S}
+7 *6 R!H u0 {6,S} {8,D}
+8 *4 R!H u0 {7,D} {9,S}
 9 *1 R!H u1 {8,S}
 """,
     kinetics = None,
@@ -4820,21 +4989,6 @@ entry(
     kinetics = None,
 )
 
-entry(
-    index = 352,
-    label = "Rn1c6b_alpha",
-    group =
-"""
-1 *2 R!H u0 {2,D} {6,S}
-2 *3 R!H u0 {1,D} {3,S}
-3    R!H ux {2,S} {4,D}
-4    R!H ux {3,D} {5,S}
-5    R!H ux {4,S} {6,D}
-6 *4 R!H ux {5,D} {1,S} {7,S}
-7 *1 R!H u1 {6,S}
-""",
-    kinetics = None,
-)
 
 entry(
     index = 353,
@@ -4876,7 +5030,7 @@ entry(
 
 entry(
     index = 342,
-    label = "Rn4(SDSS)c6_alpha_benzene",
+    label = "Rn4(SDSS)c6ben_alpha",
     group =
 """
 1  *2 C u0 {2,D} {6,S}
@@ -5005,29 +5159,38 @@ L1: Rn
         L3: Rnxc6
             L4: Rnxc6_alpha
                 L5: Rn4c6_alpha
-                    L6: Rn4c6_alpha_benzene
-                        L7: Rn4c6_alpha_benzene_Cdchain
-                        L7: Rn4(SDSS)c6_alpha_benzene
+                    L6: Rn4c6ben_alpha
+                        L7: Rn4(DSDS)c6ben_alpha
+                        L7: Rn4(SDSS)c6ben_alpha
                     L6: Rn4(SDSD)c6_alpha
                     L6: Rn4(looped)c6_alpha
                 L5: Rn3c6_alpha
-                    L6:Rn3c6b_alpha
-                        L7: Rn3(RSS)c6b_alpha
-                        L7: Rn3(SDS)c6b_alpha
+                    L6:Rn3c6ben_alpha
+                        L7: Rn3(RSS)c6ben_alpha
+                        L7: Rn3(SDS)c6ben_alpha
                 L5: Rn2c6_alpha
+                    L6: Rn2c6ben_alpha
                 L5: Rn1c6_alpha
-                    L6: Rn1c6b_alpha
+                    L6: Rn1c6ben_alpha
             L4: Rnxc6_beta_long
                 L5: Rn3c6_beta_long
+                    L6: Rn3c6ben_beta_long
                 L5: Rn2c6_beta_long
+                    L6: Rn2c6ben_beta_long
                 L5: Rn1c6_beta_long
+                    L6: Rn1c6ben_beta_long
             L4: Rnxc6_beta_short
                 L5: Rn3c6_beta_short
+                    L6: Rn3c6ben_beta_short
                 L5: Rn2c6_beta_short
+                    L6: Rn2c6ben_beta_short
                 L5: Rn1c6_beta_short
+                    L6: Rn1c6ben_beta_short
             L4: Rnxc6_gamma
                 L5: Rn2c6_gamma
+                    L6: Rn2c6ben_gamma
                 L5: Rn1c6_gamma
+                    L6: Rn1c6ben_gamma
         L3: Rnxc7
             L4: Rnxc7_alpha
                 L5: Rn4c7_alpha
