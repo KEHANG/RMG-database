@@ -53,8 +53,8 @@ entry(
 """
 1 *1 R!H              u1 {2,[S,D,T,B]}
 2 *4 R!H              ux {1,[S,D,T,B]} {3,S}
-3 *2 [Cd,Ct,CO,N]     u0 {2,S} {4,[D,T]}
-4 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {3,[D,T]}
+3 *2 [Cd,Ct,Cb,CO,N]     u0 {2,S} {4,[D,T,B]}
+4 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {3,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -66,8 +66,8 @@ entry(
 """
 1 *1 R!H            u1 {2,S}
 2 *4 R!H            u0 {1,S} {3,S}
-3 *2 [Cd,Ct,CO]     u0 {2,S} {4,[D,T]}
-4 *3 [Cd,Ct,Od,Sd,Cdd] u0 {3,[D,T]}
+3 *2 [Cd,Ct,Cb,CO]     u0 {2,S} {4,[D,T,B]}
+4 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {3,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -112,14 +112,27 @@ entry(
 )
 
 entry(
+    index = 405,
+    label = "R4_S_B",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,S}
+3 *2 Cb  u0 {2,S} {4,B}
+4 *3 Cb  u0 {3,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 9,
     label = "R4_D",
     group = 
 """
 1 *1 Cd             u1 {2,D}
 2 *4 Cd             u0 {1,D} {3,S}
-3 *2 [Cd,Ct,CO]     u0 {2,S} {4,[D,T]}
-4 *3 [Cd,Ct,Od,Sd,Cdd] u0 {3,[D,T]}
+3 *2 [Cd,Ct,Cb,CO]     u0 {2,S} {4,[D,T,B]}
+4 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {3,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -164,14 +177,27 @@ entry(
 )
 
 entry(
+    index = 406,
+    label = "R4_D_B",
+    group =
+"""
+1 *1 Cd u1 {2,D}
+2 *4 Cd u0 {1,D} {3,S}
+3 *2 Cb u0 {2,S} {4,B}
+4 *3 Cb u0 {3,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 13,
     label = "R4_T",
     group = 
 """
 1 *1 Ct             u1 {2,T}
 2 *4 Ct             u0 {1,T} {3,S}
-3 *2 [Cd,Ct,CO]     u0 {2,S} {4,[D,T]}
-4 *3 [Cd,Ct,Od,Sd,Cdd] u0 {3,[D,T]}
+3 *2 [Cd,Ct,Cb,CO]     u0 {2,S} {4,[D,T,B]}
+4 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {3,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -216,6 +242,19 @@ entry(
 )
 
 entry(
+    index = 407,
+    label = "R4_T_B",
+    group =
+"""
+1 *1 Ct u1 {2,T}
+2 *4 Ct u0 {1,T} {3,S}
+3 *2 Cb u0 {2,S} {4,B}
+4 *3 Cb u0 {3,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 21,
     label = "R5",
     group = 
@@ -223,8 +262,8 @@ entry(
 1 *1 R!H                 u1 {2,[S,D,T,B]}
 2 *4 R!H                 ux {1,[S,D,T,B]} {3,[S,D,T,B]}
 3 *5 R!H                 ux {2,[S,D,T,B]} {4,S}
-4 *2 [Cd,Ct,CO,N,CS]        u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N,CS]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -237,8 +276,8 @@ entry(
 1 *1 R!H              u1 {2,S}
 2 *4 R!H              u0 {1,S} {3,S}
 3 *5 R!H              u0 {2,S} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -286,6 +325,20 @@ entry(
 )
 
 entry(
+    index = 408,
+    label = "R5_SS_B",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,S}
+3 *5 R!H u0 {2,S} {4,S}
+4 *2 Cb  u0 {3,S} {5,B}
+5 *3 Cb  u0 {4,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 22,
     label = "R5_SM",
     group = 
@@ -293,8 +346,8 @@ entry(
 1 *1 R!H            u1 {2,S}
 2 *4 [Cd,Ct,Cb]     u0 {1,S} {3,[B,T,D]}
 3 *5 [Cd,Ct,Cb]     u0 {2,[B,T,D]} {4,S}
-4 *2 [Cd,Ct,CO,N,CS]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N,CS]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -307,8 +360,8 @@ entry(
 1 *1 R!H              u1 {2,S}
 2 *4 Cd               u0 {1,S} {3,D}
 3 *5 Cd               u0 {2,D} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -356,6 +409,20 @@ entry(
 )
 
 entry(
+    index = 409,
+    label = "R5_SD_B",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 Cd  u0 {1,S} {3,D}
+3 *5 Cd  u0 {2,D} {4,S}
+4 *2 Cb  u0 {3,S} {5,B}
+5 *3 Cb  u0 {4,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 30,
     label = "R5_DS",
     group = 
@@ -363,8 +430,8 @@ entry(
 1 *1 Cd               u1 {2,D}
 2 *4 Cd               u0 {1,D} {3,S}
 3 *5 R!H              u0 {2,S} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -412,6 +479,20 @@ entry(
 )
 
 entry(
+    index = 410,
+    label = "R5_DS_B",
+    group =
+"""
+1 *1 Cd  u1 {2,D}
+2 *4 Cd  u0 {1,D} {3,S}
+3 *5 R!H u0 {2,S} {4,S}
+4 *2 Cb  u0 {3,S} {5,B}
+5 *3 Cb  u0 {4,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 34,
     label = "R5_ST",
     group = 
@@ -419,8 +500,8 @@ entry(
 1 *1 R!H              u1 {2,S}
 2 *4 Ct               u0 {1,S} {3,T}
 3 *5 Ct               u0 {2,T} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -467,6 +548,19 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 411,
+    label = "R5_ST_B",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 Ct  u0 {1,S} {3,T}
+3 *5 Ct  u0 {2,T} {4,S}
+4 *2 Cb  u0 {3,S} {5,B}
+5 *3 Cb  u0 {4,B}
+""",
+    kinetics = None,
+)
 
 entry(
     index = 31,
@@ -476,8 +570,8 @@ entry(
 1 *1 [Cd,Ct,Cb]     u1 {2,[B,T,D]}
 2 *4 [Cd,Ct,Cb]     u0 {1,[B,T,D]} {3,S}
 3 *5 R!H            u0 {2,S} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -490,8 +584,8 @@ entry(
 1 *1 Ct               u1 {2,T}
 2 *4 Ct               u0 {1,T} {3,S}
 3 *5 R!H              u0 {2,S} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -539,6 +633,20 @@ entry(
 )
 
 entry(
+    index = 412,
+    label = "R5_TS_B",
+    group =
+"""
+1 *1 Ct  u1 {2,T}
+2 *4 Ct  u0 {1,T} {3,S}
+3 *5 R!H u0 {2,S} {4,S}
+4 *2 Cb  u0 {3,S} {5,B}
+5 *3 Cb  u0 {4,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 40,
     label = "R5_MM",
     group = 
@@ -546,8 +654,8 @@ entry(
 1 *1 Cd             u1 {2,[B,D]}
 2 *4 [Cdd,Cbf]      u0 {1,[B,D]} {3,[B,D]}
 3 *5 [Cb,Cd]        u0 {2,[B,D]} {4,S}
-4 *2 [Cd,Ct,CO,N]     u0 {3,S} {5,[D,T]}
-5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
+4 *2 [Cd,Ct,Cb,CO,N]     u0 {3,S} {5,[D,T,B]}
+5 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {4,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -561,8 +669,8 @@ entry(
 2 *4 R!H                 ux {1,[S,D,T,B]} {3,[S,D,T,B]}
 3 *6 R!H                 ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4 *5 R!H                 ux {3,[S,D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO,N]        u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO,N]        u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -576,8 +684,8 @@ entry(
 2 *4 R!H              u0 {1,[S,D,T,B]} {3,S}
 3 *6 R!H              u0 {2,S} {4,[S,D,T,B]}
 4 *5 R!H              u0 {3,[S,D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO,N]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO,N]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -591,8 +699,8 @@ entry(
 2 *4 R!H            u0 {1,S} {3,S}
 3 *6 R!H            u0 {2,S} {4,[S,D,T,B]}
 4 *5 R!H            u0 {3,[S,D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -606,8 +714,8 @@ entry(
 2 *4 R!H            u0 {1,S} {3,S}
 3 *6 R!H            u0 {2,S} {4,S}
 4 *5 R!H            u0 {3,S} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -658,6 +766,21 @@ entry(
 )
 
 entry(
+    index = 413,
+    label = "R6_SSS_B",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,S}
+3 *6 R!H u0 {2,S} {4,S}
+4 *5 R!H u0 {3,S} {5,S}
+5 *2 Cb  u0 {4,S} {6,B}
+6 *3 Cb  u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 57,
     label = "R6_SSM",
     group = 
@@ -666,8 +789,8 @@ entry(
 2 *4 R!H            u0 {1,S} {3,S}
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *5 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -718,6 +841,21 @@ entry(
 )
 
 entry(
+    index = 414,
+    label = "R6_SSM_B",
+    group =
+"""
+1 *1 R!H        u1 {2,S}
+2 *4 R!H        u0 {1,S} {3,S}
+3 *6 [Cd,Ct,Cb] u0 {2,S} {4,[D,T,B]}
+4 *5 [Cd,Ct,Cb] u0 {3,[D,T,B]} {5,S}
+5 *2 Cb         u0 {4,S} {6,B}
+6 *3 Cb         u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 52,
     label = "R6_MSR",
     group = 
@@ -726,8 +864,8 @@ entry(
 2 *4 [Cd,Ct,Cb]     u0 {1,[D,T,B]} {3,S}
 3 *6 R!H            u0 {2,S} {4,[S,D,T,B]}
 4 *5 R!H            u0 {3,[S,D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO,N]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO,N]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -741,8 +879,8 @@ entry(
 2 *4 Cd             u0 {1,D} {3,S}
 3 *6 R!H            u0 {2,S} {4,[S,D,T,B]}
 4 *5 R!H            u0 {3,[S,D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -756,8 +894,8 @@ entry(
 2 *4 Cd             u0 {1,D} {3,S}
 3 *6 R!H            u0 {2,S} {4,S}
 4 *5 R!H            u0 {3,S} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -808,6 +946,21 @@ entry(
 )
 
 entry(
+    index = 415,
+    label = "R6_DSS_B",
+    group =
+"""
+1 *1 Cd  u1 {2,D}
+2 *4 Cd  u0 {1,D} {3,S}
+3 *6 R!H u0 {2,S} {4,S}
+4 *5 R!H u0 {3,S} {5,S}
+5 *2 Cb  u0 {4,S} {6,B}
+6 *3 Cb  u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 66,
     label = "R6_DSM",
     group = 
@@ -816,8 +969,8 @@ entry(
 2 *4 Cd             u0 {1,D} {3,S}
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *5 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -868,6 +1021,21 @@ entry(
 )
 
 entry(
+    index = 416,
+    label = "R6_DSM_B",
+    group =
+"""
+1 *1 Cd         u1 {2,D}
+2 *4 Cd         u0 {1,D} {3,S}
+3 *6 [Cd,Ct,Cb] u0 {2,S} {4,[D,T,B]}
+4 *5 [Cd,Ct,Cb] u0 {3,[D,T,B]} {5,S}
+5 *2 Cb         u0 {4,S} {6,B}
+6 *3 Cb         u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 70,
     label = "R6_TSR",
     group = 
@@ -876,8 +1044,8 @@ entry(
 2 *4 Ct             u0 {1,T} {3,S}
 3 *6 R!H            u0 {2,S} {4,[S,D,T,B]}
 4 *5 R!H            u0 {3,[S,D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -891,8 +1059,8 @@ entry(
 2 *4 Ct             u0 {1,T} {3,S}
 3 *6 R!H            u0 {2,S} {4,S}
 4 *5 R!H            u0 {3,S} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -943,6 +1111,21 @@ entry(
 )
 
 entry(
+    index = 417,
+    label = "R6_TSS_B",
+    group =
+"""
+1 *1 Ct  u1 {2,T}
+2 *4 Ct  u0 {1,T} {3,S}
+3 *6 R!H u0 {2,S} {4,S}
+4 *5 R!H u0 {3,S} {5,S}
+5 *2 Cb  u0 {4,S} {6,B}
+6 *3 Cb  u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 75,
     label = "R6_TSM",
     group = 
@@ -951,8 +1134,8 @@ entry(
 2 *4 Ct             u0 {1,T} {3,S}
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *5 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
-5 *2 [Cd,Ct,CO]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1003,6 +1186,21 @@ entry(
 )
 
 entry(
+    index = 418,
+    label = "R6_TSM_B",
+    group =
+"""
+1 *1 Ct         u1 {2,T}
+2 *4 Ct         u0 {1,T} {3,S}
+3 *6 [Cd,Ct,Cb] u0 {2,S} {4,[D,T,B]}
+4 *5 [Cd,Ct,Cb] u0 {3,[D,T,B]} {5,S}
+5 *2 Cb         u0 {4,S} {6,B}
+6 *3 Cb         u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 88,
     label = "R6_SMS",
     group = 
@@ -1011,8 +1209,8 @@ entry(
 2 *4 [Cd,Ct,Cb]       u0 {1,S} {3,[D,T,B]}
 3 *6 [Cd,Ct,Cb]       u0 {2,[D,T,B]} {4,S}
 4 *5 R!H              u0 {3,S} {5,S}
-5 *2 [Cd,Ct,CO,N]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO,N]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1063,6 +1261,21 @@ entry(
 )
 
 entry(
+    index = 419,
+    label = "R6_SMS_B",
+    group =
+"""
+1 *1 R!H        u1 {2,S}
+2 *4 [Cd,Ct,Cb] u0 {1,S} {3,[D,T,B]}
+3 *6 [Cd,Ct,Cb] u0 {2,[D,T,B]} {4,S}
+4 *5 R!H        u0 {3,S} {5,S}
+5 *2 Cb         u0 {4,S} {6,B}
+6 *3 Cb         u0 {5,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 75,
     label = "R6_SMM",
     group = 
@@ -1071,8 +1284,8 @@ entry(
 2 *4 [Cd,Cb]        u0 {1,S} {3,[D,B]}
 3 *6 [Cdd,Cbf]      u0 {2,[D,B]} {4,[D,B]}
 4 *5 [Cd,Cb]        u0 {3,[D,B]} {5,S}
-5 *2 [Cd,Ct,CO,N]     u0 {4,S} {6,[D,T]}
-6 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {5,[D,T]}
+5 *2 [Cd,Ct,Cb,CO,N]     u0 {4,S} {6,[D,T,B]}
+6 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {5,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1094,8 +1307,8 @@ entry(
 3 *6 R!H              ux {2,[S,D,T,B]} {4,[S,D,T,B]}
 4 *7 R!H              ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *5 R!H              ux {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1110,8 +1323,8 @@ entry(
 3 *6 R!H              u0 {2,S} {4,S}
 4 *7 R!H              u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H              u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1126,8 +1339,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H            u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1142,8 +1355,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1197,6 +1410,22 @@ entry(
 )
 
 entry(
+    index = 420,
+    label = "R7_SSSS_B",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,S}
+3 *6 R!H u0 {2,S} {4,S}
+4 *7 R!H u0 {3,S} {5,S}
+5 *5 R!H u0 {4,S} {6,S}
+6 *2 Cb  u0 {5,S} {7,B}
+7 *3 Cb  u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 107,
     label = "R7_SSSM",
     group = 
@@ -1206,8 +1435,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 [Cd,Ct,Cb]     u0 {3,S} {5,[D,T,B]}
 5 *5 [Cd,Ct,Cb]     u0 {4,[D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1261,6 +1490,22 @@ entry(
 )
 
 entry(
+    index = 421,
+    label = "R7_SSSM_B",
+    group =
+"""
+1 *1 R!H        u1 {2,S}
+2 *4 R!H        u0 {1,S} {3,S}
+3 *6 R!H        u0 {2,S} {4,S}
+4 *7 [Cd,Ct,Cb] u0 {3,S} {5,[D,T,B]}
+5 *5 [Cd,Ct,Cb] u0 {4,[D,T,B]} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 88,
     label = "R7_MSSR",
     group = 
@@ -1270,8 +1515,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H            u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1286,8 +1531,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H            u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1302,8 +1547,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1357,6 +1602,22 @@ entry(
 )
 
 entry(
+    index = 422,
+    label = "R7_DSSS_B",
+    group =
+"""
+1 *1 Cd  u1 {2,D}
+2 *4 Cd  u0 {1,D} {3,S}
+3 *6 R!H u0 {2,S} {4,S}
+4 *7 R!H u0 {3,S} {5,S}
+5 *5 R!H u0 {4,S} {6,S}
+6 *2 Cb  u0 {5,S} {7,B}
+7 *3 Cb  u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 116,
     label = "R7_DSSM",
     group = 
@@ -1366,8 +1627,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 [Cd,Ct,Cb]     u0 {3,S} {5,[D,T,B]}
 5 *5 [Cd,Ct,Cb]     u0 {4,[D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1421,6 +1682,22 @@ entry(
 )
 
 entry(
+    index = 423,
+    label = "R7_DSSM_B",
+    group =
+"""
+1 *1 Cd         u1 {2,D}
+2 *4 Cd         u0 {1,D} {3,S}
+3 *6 R!H        u0 {2,S} {4,S}
+4 *7 [Cd,Ct,Cb] u0 {3,S} {5,[D,T,B]}
+5 *5 [Cd,Ct,Cb] u0 {4,[D,T,B]} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 120,
     label = "R7_TSSR",
     group = 
@@ -1430,8 +1707,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H            u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1446,8 +1723,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 R!H            u0 {3,S} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1501,6 +1778,22 @@ entry(
 )
 
 entry(
+    index = 424,
+    label = "R7_TSSS_B",
+    group =
+"""
+1 *1 Ct  u1 {2,T}
+2 *4 Ct  u0 {1,T} {3,S}
+3 *6 R!H u0 {2,S} {4,S}
+4 *7 R!H u0 {3,S} {5,S}
+5 *5 R!H u0 {4,S} {6,S}
+6 *2 Cb  u0 {5,S} {7,B}
+7 *3 Cb  u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 125,
     label = "R7_TSSM",
     group = 
@@ -1510,8 +1803,8 @@ entry(
 3 *6 R!H            u0 {2,S} {4,S}
 4 *7 [Cd,Ct,Cb]     u0 {3,S} {5,[D,T,B]}
 5 *5 [Cd,Ct,Cb]     u0 {4,[D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1565,6 +1858,22 @@ entry(
 )
 
 entry(
+    index = 425,
+    label = "R7_TSSM_B",
+    group =
+"""
+1 *1 Ct         u1 {2,T}
+2 *4 Ct         u0 {1,T} {3,S}
+3 *6 R!H        u0 {2,S} {4,S}
+4 *7 [Cd,Ct,Cb] u0 {3,S} {5,[D,T,B]}
+5 *5 [Cd,Ct,Cb] u0 {4,[D,T,B]} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 138,
     label = "R7_RSMS",
     group = 
@@ -1574,8 +1883,8 @@ entry(
 3 *6 [Cd,Ct,Cb]       u0 {2,S} {4,[D,T,B]}
 4 *7 [Cd,Ct,Cb]       u0 {3,[D,T,B]} {5,S}
 5 *5 R!H              u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1590,8 +1899,8 @@ entry(
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *7 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1645,6 +1954,22 @@ entry(
 )
 
 entry(
+    index = 426,
+    label = "R7_SSMS_B",
+    group =
+"""
+1 *1 R!H        u1 {2,S}
+2 *4 R!H        u0 {1,S} {3,S}
+3 *6 [Cd,Ct,Cb] u0 {2,S} {4,[D,T,B]}
+4 *7 [Cd,Ct,Cb] u0 {3,[D,T,B]} {5,S}
+5 *5 R!H        u0 {4,S} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 112,
     label = "R7_MSMS",
     group = 
@@ -1654,8 +1979,8 @@ entry(
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *7 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1670,8 +1995,8 @@ entry(
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *7 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1725,6 +2050,22 @@ entry(
 )
 
 entry(
+    index = 427,
+    label = "R7_DSMS_B",
+    group =
+"""
+1 *1 Cd         u1 {2,D}
+2 *4 Cd         u0 {1,D} {3,S}
+3 *6 [Cd,Ct,Cb] u0 {2,S} {4,[D,T,B]}
+4 *7 [Cd,Ct,Cb] u0 {3,[D,T,B]} {5,S}
+5 *5 R!H        u0 {4,S} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 147,
     label = "R7_TSMS",
     group = 
@@ -1734,8 +2075,8 @@ entry(
 3 *6 [Cd,Ct,Cb]     u0 {2,S} {4,[D,T,B]}
 4 *7 [Cd,Ct,Cb]     u0 {3,[D,T,B]} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1788,6 +2129,21 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 428,
+    label = "R7_TSMS_B",
+    group =
+"""
+1 *1 Ct         u1 {2,T}
+2 *4 Ct         u0 {1,T} {3,S}
+3 *6 [Cd,Ct,Cb] u0 {2,S} {4,[D,T,B]}
+4 *7 [Cd,Ct,Cb] u0 {3,[D,T,B]} {5,S}
+5 *5 R!H        u0 {4,S} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
 
 entry(
     index = 155,
@@ -1799,8 +2155,8 @@ entry(
 3 *6 [Cd,Ct,Cb]       u0 {2,[D,T,B]} {4,S}
 4 *7 R!H              u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H              u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1815,8 +2171,8 @@ entry(
 3 *6 [Cd,Ct,Cb]     u0 {2,[D,T,B]} {4,S}
 4 *7 R!H            u0 {3,S} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1870,6 +2226,22 @@ entry(
 )
 
 entry(
+    index = 429,
+    label = "R7_SMSS_B",
+    group =
+"""
+1 *1 R!H        u1 {2,S}
+2 *4 [Cd,Ct,Cb] u0 {1,S} {3,[D,T,B]}
+3 *6 [Cd,Ct,Cb] u0 {2,[D,T,B]} {4,S}
+4 *7 R!H        u0 {3,S} {5,S}
+5 *5 R!H        u0 {4,S} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 160,
     label = "R7_SMSM",
     group = 
@@ -1879,8 +2251,8 @@ entry(
 3 *6 [Cd,Ct,Cb]     u0 {2,[D,T,B]} {4,S}
 4 *7 [Cd,Ct,Cb]     u0 {3,S} {5,[D,T,B]}
 5 *5 [Cd,Ct,Cb]     u0 {4,[D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1933,6 +2305,21 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 430,
+    label = "R7_SMSM_B",
+    group =
+"""
+1 *1 R!H        u1 {2,S}
+2 *4 [Cd,Ct,Cb] u0 {1,S} {3,[D,T,B]}
+3 *6 [Cd,Ct,Cb] u0 {2,[D,T,B]} {4,S}
+4 *7 [Cd,Ct,Cb] u0 {3,S} {5,[D,T,B]}
+5 *5 [Cd,Ct,Cb] u0 {4,[D,T,B]} {6,S}
+6 *2 Cb         u0 {5,S} {7,B}
+7 *3 Cb         u0 {6,B}
+""",
+    kinetics = None,
+)
 
 entry(
     index = 130,
@@ -1944,8 +2331,8 @@ entry(
 3 *6 [Cb,Cd]        u0 {2,[B,D]} {4,S}
 4 *7 R!H            u0 {3,S} {5,[S,D,T,B]}
 5 *5 R!H            u0 {4,[S,D,T,B]} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1960,8 +2347,8 @@ entry(
 3 *6 [Cb,Cd]        u0 {2,S} {4,[D,B]}
 4 *7 [Cbf,Cdd]      u0 {3,[D,B]} {5,[D,B]}
 5 *5 [Cb,Cd]        u0 {4,[D,B]} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1976,8 +2363,8 @@ entry(
 3 *6 [Cbf,Cdd]      u0 {2,[D,B]} {4,[D,B]}
 4 *7 [Cb,Cd]        u0 {3,[D,B]} {5,S}
 5 *5 R!H            u0 {4,S} {6,S}
-6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
-7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
+6 *2 [Cd,Ct,Cb,CO,N]     u0 {5,S} {7,[D,T,B]}
+7 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {6,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -1993,8 +2380,8 @@ entry(
 4 *7 R!H           ux {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *8 R!H           ux {4,[S,D,T,B]} {6,[S,D,T,B]}
 6 *5 R!H           ux {5,[S,D,T,B]} {7,S}
-7 *2 [Cd,Ct,CO,N]   u0 {6,S} {8,[D,T]}
-8 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {7,[D,T]}
+7 *2 [Cd,Ct,Cb,CO,N]   u0 {6,S} {8,[D,T,B]}
+8 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {7,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -2011,8 +2398,8 @@ entry(
 5 *8 R!H           ux {4,[S,D,T,B]} {6,[S,D,T,B]}
 6 *9 R!H           ux {5,[S,D,T,B]} {7,[S,D,T,B]}
 7 *5 R!H           ux {6,[S,D,T,B]} {8,S}
-8 *2 [Cd,Ct,CO,N]     u0 {7,S} {9,[D,T]}
-9 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {8,[D,T]}
+8 *2 [Cd,Ct,Cb,CO,N]     u0 {7,S} {9,[D,T,B]}
+9 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {8,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -2866,8 +3253,8 @@ entry(
 6 *9 R!H           ux {5,[S,D,T,B]} {7,[S,D,T,B]}
 7 *10 R!H          ux {6,[S,D,T,B]} {8,[S,D,T,B]}
 8 *5 R!H           ux {7,[S,D,T,B]} {9,S}
-9 *2 [Cd,Ct,CO,N]     u0 {8,S} {10,[D,T]}
-10 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {9,[D,T]}
+9 *2 [Cd,Ct,Cb,CO,N]     u0 {8,S} {10,[D,T,B]}
+10 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {9,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -2886,8 +3273,8 @@ entry(
 7 *10 R!H          ux {6,[S,D,T,B]} {8,[S,D,T,B]}
 8 *11 R!H          ux {7,[S,D,T,B]} {9,[S,D,T,B]}
 9 *5 R!H           ux {8,[S,D,T,B]} {10,S}
-10 *2 [Cd,Ct,CO,N]     u0 {9,S} {11,[D,T]}
-11 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {10,[D,T]}
+10 *2 [Cd,Ct,Cb,CO,N]     u0 {9,S} {11,[D,T,B]}
+11 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {10,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -5312,14 +5699,17 @@ L1: Rn
                     L6: R4_S_(CO)_D
             L4: R4_S_T
             L4: R4_S_CO
+            L4: R4_S_B
         L3: R4_D
             L4: R4_D_D
             L4: R4_D_T
             L4: R4_D_CO
+            L4: R4_D_B
         L3: R4_T
             L4: R4_T_D
             L4: R4_T_T
             L4: R4_T_CO
+            L4: R4_T_B
     L2: R5
         L3: R5_intra_7_member_ring
             L4: R5_intra_7_member_ring_SS
@@ -5330,25 +5720,30 @@ L1: Rn
             L4: R5_SS_D
             L4: R5_SS_T
             L4: R5_SS_CO
+            L4: R5_SS_B
         L3: R5_SM
             L4: R5_SD
                 L5: R5_SD_D
                 L5: R5_SD_T
                 L5: R5_SD_CO
+                L5: R5_SD_B
             L4: R5_ST
                 L5: R5_ST_D
                 L5: R5_ST_T
                 L5: R5_ST_CO
+                L5: R5_ST_B
             L4: R5_SB
         L3: R5_MS
             L4: R5_DS
                 L5: R5_DS_D
                 L5: R5_DS_T
                 L5: R5_DS_CO
+                L5: R5_DS_B
             L4: R5_TS
                 L5: R5_TS_D
                 L5: R5_TS_T
                 L5: R5_TS_CO
+                L5: R5_TS_B
         L3: R5_MM
     L2: R6
         L3: R6_intra_10_member_ring
@@ -5366,33 +5761,40 @@ L1: Rn
                     L6: R6_SSS_D
                     L6: R6_SSS_T
                     L6: R6_SSS_CO
+                    L6: R6_SSS_B
                 L5: R6_SSM
                     L6: R6_SSM_D
                     L6: R6_SSM_T
                     L6: R6_SSM_CO
+                    L6: R6_SSM_B
             L4: R6_MSR
                 L5: R6_DSR
                     L6: R6_DSS
                         L7: R6_DSS_D
                         L7: R6_DSS_T
                         L7: R6_DSS_CO
+                        L7: R6_DSS_B
                     L6: R6_DSM
                         L7: R6_DSM_D
                         L7: R6_DSM_T
                         L7: R6_DSM_CO
+                        L7: R6_DSM_B
                 L5: R6_TSR
                     L6: R6_TSS
                         L7: R6_TSS_D
                         L7: R6_TSS_T
                         L7: R6_TSS_CO
+                        L7: R6_TSS_B
                     L6: R6_TSM
                         L7: R6_TSM_D
                         L7: R6_TSM_T
                         L7: R6_TSM_CO
+                        L7: R6_TSM_B
         L3: R6_SMS
             L4: R6_SMS_D
             L4: R6_SMS_T
             L4: R6_SMS_CO
+            L4: R6_SMS_B
         L3: R6_SMM
     L2: R7plus
         L3: R7
@@ -5408,52 +5810,63 @@ L1: Rn
                         L7: R7_SSSS_D
                         L7: R7_SSSS_T
                         L7: R7_SSSS_CO
+                        L7: R7_SSSS_B
                     L6: R7_SSSM
                         L7: R7_SSSM_D
                         L7: R7_SSSM_T
                         L7: R7_SSSM_CO
+                        L7: R7_SSSM_B
                 L5: R7_MSSR
                     L6: R7_DSSR
                         L7: R7_DSSS
                             L8: R7_DSSS_D
                             L8: R7_DSSS_T
                             L8: R7_DSSS_CO
+                            L8: R7_DSSS_B
                         L7: R7_DSSM
                             L8: R7_DSSM_D
                             L8: R7_DSSM_T
                             L8: R7_DSSM_CO
+                            L8: R7_DSSM_B
                     L6: R7_TSSR
                         L7: R7_TSSS
                             L8: R7_TSSS_D
                             L8: R7_TSSS_T
                             L8: R7_TSSS_CO
+                            L8: R7_TSSS_B
                         L7: R7_TSSM
                             L8: R7_TSSM_D
                             L8: R7_TSSM_T
                             L8: R7_TSSM_CO
+                            L8: R7_TSSM_B
             L4: R7_RSMS
                 L5: R7_SSMS
                     L6: R7_SSMS_D
                     L6: R7_SSMS_T
                     L6: R7_SSMS_CO
+                    L6: R7_SSMS_B
                 L5: R7_MSMS
                     L6: R7_DSMS
                         L7: R7_DSMS_D
                         L7: R7_DSMS_T
                         L7: R7_DSMS_CO
+                        L7: R7_DSMS_B
                     L6: R7_TSMS
                         L7: R7_TSMS_D
                         L7: R7_TSMS_T
                         L7: R7_TSMS_CO
+                        L7: R7_TSMS_B
             L4: R7_SMSR
                 L5: R7_SMSS
                     L6: R7_SMSS_D
                     L6: R7_SMSS_T
                     L6: R7_SMSS_CO
+                    L6: R7_SMSS_B
                 L5: R7_SMSM
                     L6: R7_SMSM_D
                     L6: R7_SMSM_T
                     L6: R7_SMSM_CO
+                    L6: R7_SMSM_B
             L4: R7_MMSR
             L4: R7_RSMM
             L4: R7_SMMS
