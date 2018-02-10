@@ -455,14 +455,14 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([-25.2737,-26.7232,-26.6259,-25.813,-21.9426,-17.4094,-9.23724],'J/(mol*K)'),
-        H298 = (111.585,'kJ/mol'),
-        S298 = (224.703,'J/(mol*K)'),
+        Cpdata = ([-13.9858, -20.3009, -22.0796, -20.3058, 87.1598, -13.9313, -6.28648], 'J/(mol*K)'),
+        H298 = (90.5582, 'kJ/mol'),
+        S298 = (258.685, 'J/(mol*K)'),
     ),
     shortDesc = u"""Fitted from thermo library values""",
     longDesc = 
 u"""
-Fitted from molecule s1_3_6_diene_1_4 from Bicyclics_QM_190_isomorphic library.
+Fitted from molecule Ringrad2 from HBPhenylMigra library.
 """,
 )
 
@@ -1055,14 +1055,14 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([-29.6317,-31.556,-31.0009,-28.4484,-21.7675,-15.7389,-6.57024],'J/(mol*K)'),
-        H298 = (125.442,'kJ/mol'),
-        S298 = (213.238,'J/(mol*K)'),
+        Cpdata = ([-14.4582, -17.0164, -15.6164, -11.9566, 95.433, -5.84216, 1.71976], 'J/(mol*K)'),
+        H298 = (89.0643, 'kJ/mol'),
+        S298 = (257.74, 'J/(mol*K)'),
     ),
     shortDesc = u"""Fitted from thermo library values""",
     longDesc = 
 u"""
-Fitted from molecule s1_4_6_diene_1_4 from Bicyclics_QM_190_isomorphic library.
+Fitted from molecule Ringrad3 from HBPhenylMigra library.
 """,
 )
 
@@ -1576,14 +1576,14 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([-39.7954,-42.8746,-42.2591,-38.4302,-28.2183,-19.3441,-7.24736],'J/(mol*K)'),
-        H298 = (72.801,'kJ/mol'),
-        S298 = (204.461,'J/(mol*K)'),
+        Cpdata = ([-38.8842, -41.4347, -37.8277, -31.2278, 80.9262, -15.5956, -2.63516], 'J/(mol*K)'),
+        H298 = (39.2654, 'kJ/mol'),
+        S298 = (231.825, 'J/(mol*K)'),
     ),
     shortDesc = u"""Fitted from thermo library values""",
     longDesc = 
 u"""
-Fitted from molecule s1_5_6_diene_1_3 from Bicyclics_QM_190_isomorphic library.
+Fitted from molecule Ringrad4 from HBPhenylMigra library.
 """,
 )
 
@@ -2059,14 +2059,14 @@ entry(
 """,
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([-44.2714,-46.0734,-44.5631,-39.8526,-28.0332,-18.0187,-4.52436],'J/(mol*K)'),
-        H298 = (53.0262,'kJ/mol'),
-        S298 = (178.633,'J/(mol*K)'),
+        Cpdata = ([-40.4799, -40.8542, -39.6286, -35.2573, 78.1885, -15.9734, -2.64201], 'J/(mol*K)'),
+        H298 = (16.3224, 'kJ/mol'),
+        S298 = (210.048, 'J/(mol*K)'),
     ),
     shortDesc = u"""Fitted from thermo library values""",
     longDesc = 
 u"""
-Fitted from molecule s1_6_6_diene_1_3 from Bicyclics_QM_190_isomorphic library.
+Fitted from molecule Ringrad5 from HBPhenylMigra library.
 """,
 )
 
