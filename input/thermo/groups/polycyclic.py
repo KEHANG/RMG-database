@@ -3311,12 +3311,42 @@ Fitted from molecule s2_4_6_ene_6 from Bicyclics_QM_190_isomorphic library.
 entry(
     index = 0,
     label = "s2_4_6_diene",
-    group = "OR{s2_4_6_diene_1_3, s2_4_6_diene_1_6, s2_4_6_diene_2_6, s2_4_6_diene_5_7}",
+    group = "OR{s2_4_6_diene_0_2, s2_4_6_diene_1_3, s2_4_6_diene_1_6, s2_4_6_diene_2_6, s2_4_6_diene_5_7}",
     thermo = None,
     shortDesc = u"""""",
     longDesc = 
 u"""
 
+""",
+)
+
+entry(
+    index = 180,
+    label = "s2_4_6_diene_0_2",
+    group = 
+"""
+1   R!H u0 {2,S} {3,S} {6,S}
+2   R!H u0 {1,S} {4,S} {5,D}
+3   R!H u0 {1,S} {4,S}
+4   R!H u0 {2,S} {3,S}
+5   R!H u0 {2,D} {8,S}
+6   R!H u0 {1,S} {7,S}
+7 * R!H u0 {6,S} {8,D}
+8   R!H u0 {5,S} {7,D}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([-20.7659, -26.357, -26.9409, -22.8803, 85.5587, -14.6667, -8.42652], 'J/(mol*K)'),
+        H298 = (141.488, 'kJ/mol'),
+        S298 = (255.146, 'J/(mol*K)'),
+    ),
+    shortDesc = u"""Fitted from thermo library values""",
+    longDesc = 
+u"""
+Fitted from molecule Endotransrad2 from HBEndoCyclo library
+
+Model species
+CCCCC1CC2=CC=C[CH]C21
 """,
 )
 
@@ -6400,6 +6430,76 @@ Fitted from species naphthalene from naphthalene_H library.
 
 entry(
     index = 0,
+    label = "s2_6_7",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {11,[S,D,T,B]}
+11   R!H u0 {10,[S,D,T,B]} {8,[S,D,T,B]}
+""",
+    thermo = None,
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_7_diene",
+    group = "OR{s2_6_7_diene_0_2}",
+    thermo = None,
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 125,
+    label = "s2_6_7_diene_0_2",
+    group = 
+"""
+1    R!H u0 {2,S} {3,S} {5,S}
+2    R!H u0 {1,S} {4,S} {6,D}
+3    R!H u0 {1,S} {8,S}
+4    R!H u0 {2,S} {10,S}
+5    R!H u0 {1,S} {9,S}
+6    R!H u0 {2,D} {7,S}
+7  * R!H u0 {6,S} {8,D}
+8    R!H u0 {3,S} {7,D}
+9    R!H u0 {5,S} {11,S}
+10   R!H u0 {4,S} {11,S}
+11   R!H u0 {9,S} {10,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([-40.165, -40.4487, -38.2688, -32.1366, 81.9741, -12.2705, -1.96654], 'J/(mol*K)'),
+        H298 = (48.6842, 'kJ/mol'),
+        S298 = (205.521, 'J/(mol*K)'),
+    ),
+    shortDesc = u"""Fitted from thermo library values""",
+    longDesc = 
+u"""
+Fitted from molecule Endocisrad5 from HBEndoCyclo library
+
+Model species
+CC1CCCCC2=CC=C[CH]C21
+""",
+)
+
+entry(
+    index = 0,
     label = "s3_4_4",
     group = 
 """
@@ -9183,6 +9283,7 @@ L1: PolycyclicRing
             L4: s2_4_6_ene_2
             L4: s2_4_6_ene_6
         L3: s2_4_6_diene
+            L4: s2_4_6_diene_0_2
             L4: s2_4_6_diene_1_3
             L4: s2_4_6_diene_1_6
             L4: s2_4_6_diene_2_6
@@ -9299,6 +9400,9 @@ L1: PolycyclicRing
             L4: s2_6_6_ben_ene_1
             L4: s2_6_6_ben_ene_2
         L3: s2_6_6_naphthalene
+    L2: s2_6_7
+        L3: s2_6_7_diene
+            L4: s2_6_7_diene_0_2
     L2: s3_4_4
         L3: s3_4_4_ane
         L3: s3_4_4_ene
