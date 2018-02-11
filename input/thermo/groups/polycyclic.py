@@ -6500,6 +6500,209 @@ CC1CCCCC2=CC=C[CH]C21
 
 entry(
     index = 0,
+    label = "s2_6_8",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {12,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {11,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_9",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {13,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {13,[S,D,T,B]}
+13   R!H u0 {11,[S,D,T,B]} {12,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_10",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {13,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {14,[S,D,T,B]}
+13   R!H u0 {11,[S,D,T,B]} {14,[S,D,T,B]}
+14   R!H u0 {12,[S,D,T,B]} {13,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_11",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {13,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {14,[S,D,T,B]}
+13   R!H u0 {11,[S,D,T,B]} {15,[S,D,T,B]}
+14   R!H u0 {12,[S,D,T,B]} {15,[S,D,T,B]}
+15   R!H u0 {13,[S,D,T,B]} {14,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_12",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {13,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {14,[S,D,T,B]}
+13   R!H u0 {11,[S,D,T,B]} {15,[S,D,T,B]}
+14   R!H u0 {12,[S,D,T,B]} {16,[S,D,T,B]}
+15   R!H u0 {13,[S,D,T,B]} {16,[S,D,T,B]}
+16   R!H u0 {14,[S,D,T,B]} {15,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_13",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {13,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {14,[S,D,T,B]}
+13   R!H u0 {11,[S,D,T,B]} {15,[S,D,T,B]}
+14   R!H u0 {12,[S,D,T,B]} {16,[S,D,T,B]}
+15   R!H u0 {13,[S,D,T,B]} {17,[S,D,T,B]}
+16   R!H u0 {14,[S,D,T,B]} {17,[S,D,T,B]}
+17   R!H u0 {15,[S,D,T,B]} {16,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
+    label = "s2_6_14",
+    group = 
+"""
+1    R!H u0 {2,[S,D,T,B]} {3,[S,D,T,B]} {6,[S,D,T,B]}
+2    R!H u0 {1,[S,D,T,B]} {4,[S,D,T,B]} {5,[S,D,T,B]}
+3    R!H u0 {1,[S,D,T,B]} {9,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5    R!H u0 {2,[S,D,T,B]} {8,[S,D,T,B]}
+6    R!H u0 {1,[S,D,T,B]} {10,[S,D,T,B]}
+7  * R!H u0 {4,[S,D,T,B]} {9,[S,D,T,B]}
+8    R!H u0 {5,[S,D,T,B]} {11,[S,D,T,B]}
+9    R!H u0 {3,[S,D,T,B]} {7,[S,D,T,B]}
+10   R!H u0 {6,[S,D,T,B]} {12,[S,D,T,B]}
+11   R!H u0 {13,[S,D,T,B]} {8,[S,D,T,B]}
+12   R!H u0 {10,[S,D,T,B]} {14,[S,D,T,B]}
+13   R!H u0 {11,[S,D,T,B]} {15,[S,D,T,B]}
+14   R!H u0 {12,[S,D,T,B]} {16,[S,D,T,B]}
+15   R!H u0 {13,[S,D,T,B]} {17,[S,D,T,B]}
+16   R!H u0 {14,[S,D,T,B]} {18,[S,D,T,B]}
+17   R!H u0 {15,[S,D,T,B]} {18,[S,D,T,B]}
+18   R!H u0 {16,[S,D,T,B]} {17,[S,D,T,B]}
+""",
+    thermo = u's2_6_7_diene_0_2',
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+
+""",
+)
+
+entry(
+    index = 0,
     label = "s3_4_4",
     group = 
 """
@@ -9403,6 +9606,13 @@ L1: PolycyclicRing
     L2: s2_6_7
         L3: s2_6_7_diene
             L4: s2_6_7_diene_0_2
+    L2: s2_6_8
+    L2: s2_6_9
+    L2: s2_6_10
+    L2: s2_6_11
+    L2: s2_6_12
+    L2: s2_6_13
+    L2: s2_6_14
     L2: s3_4_4
         L3: s3_4_4_ane
         L3: s3_4_4_ene
