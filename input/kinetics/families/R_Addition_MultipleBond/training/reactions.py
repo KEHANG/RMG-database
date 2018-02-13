@@ -1293,9 +1293,9 @@ entry(
     label = "C6H6-2 + C3H7 <=> C9H13",
     degeneracy = 1,
     kinetics = Arrhenius(
-        A = (25.1406, 'cm^3/(mol*s)'),
-        n = 2.87846,
-        Ea = (6.703, 'kcal/mol'),
+        A = (144.44, 'cm^3/(mol*s)'),
+        n = 2.6469,
+        Ea = (43.8158, 'kJ/mol'),
         T0 = (1, 'K'),
     ),
     rank = 3,
