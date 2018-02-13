@@ -1306,3 +1306,25 @@ Taken from entry: benzene + propyl_rad <=> p2
 """,
 )
 
+
+entry(
+    index = 79,
+    label = "C7H8-5 + C7H7-3 <=> C14H15",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (144.44, 'cm^3/(mol*s)'),
+        n = 2.6469,
+        Ea = (43.8158, 'kJ/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: MB_Add_kehang""",
+    longDesc = 
+u"""
+Taken from entry: toluene + benzylic <=> sub
+
+not real data yet, but from toluene + CH3 <=> sub
+would expect the real rate is slower than this fake data
+""",
+)
+
