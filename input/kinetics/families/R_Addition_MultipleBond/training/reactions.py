@@ -1299,10 +1299,11 @@ entry(
         T0 = (1, 'K'),
     ),
     rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
+    shortDesc = u"""""",
     longDesc = 
 u"""
-Taken from entry: benzene + propyl_rad <=> p2
+not real data yet, but from toluene + CH3 <=> sub
+would expect the real rate is slower than this fake data
 """,
 )
 
