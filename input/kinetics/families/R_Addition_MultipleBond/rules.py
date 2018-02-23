@@ -40032,21 +40032,6 @@ entry(
 
 entry(
     index = 3103,
-    label = "Cds-HH_Cds-CsH;CsJ-CbHH",
-    kinetics = ArrheniusEP(
-        A = (53200, 'cm^3/(mol*s)'),
-        n = 2.1,
-        alpha = 0,
-        E0 = (10.01, 'kcal/mol'),
-        Tmin = (300, 'K'),
-        Tmax = (2000, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""CAC CBS-QB3, 1dhr""",
-)
-
-entry(
-    index = 3103,
     label = "Cds-HH_Cds-HH;O2b",
     kinetics = ArrheniusEP(
         A = (111, 'cm^3/(mol*s)'),
