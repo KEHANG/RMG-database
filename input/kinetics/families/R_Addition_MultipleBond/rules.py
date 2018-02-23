@@ -1644,11 +1644,13 @@ entry(
 entry(
     index = 110,
     label = "Cds-HH_Cds-CbH;CsJ-CsHH",
-    kinetics = Arrhenius(
+    kinetics = ArrheniusEP(
         A = (236.006, 'cm^3/(mol*s)'),
         n = 2.7878,
-        Ea = (15.4228, 'kJ/mol'),
-        T0 = (1, 'K'),
+        alpha = 0,
+        E0 = (15.4228, 'kJ/mol'),
+        Tmin = (300, 'K'),
+        Tmax = (1500, 'K'),
     ),
     rank = 3,
     shortDesc = u"""kinetics calculated by Lawrence Lai under the CBS-QB3 level of theory, 2016
