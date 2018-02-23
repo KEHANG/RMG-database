@@ -1608,6 +1608,63 @@ Curran's estimation for neoC5H11 + iC3H7, similar to tC4H9 + iC4H9
 )
 
 entry(
+    index = 477,
+    label = "C_rad/H/OneDeC;C_rad/H/OneDeC",
+    kinetics = ArrheniusEP(
+        A = (4.79e+14, 'cm^3/(mol*s)'),
+        n = -0.75,
+        alpha = 0,
+        E0 = (0, 'kcal/mol'),
+        Tmin = (300, 'K'),
+        Tmax = (1500, 'K'),
+    ),
+    rank = 5,
+    shortDesc = u"""Copied from C_pri_rad;C_sec_rad, it's an over-estimation""",
+    longDesc = 
+u"""
+\
+""",
+)
+
+entry(
+    index = 477,
+    label = "C_rad/H/OneDeC;C_rad/H/CdCd",
+    kinetics = ArrheniusEP(
+        A = (4.79e+14, 'cm^3/(mol*s)'),
+        n = -0.75,
+        alpha = 0,
+        E0 = (0, 'kcal/mol'),
+        Tmin = (300, 'K'),
+        Tmax = (1500, 'K'),
+    ),
+    rank = 5,
+    shortDesc = u"""Copied from C_pri_rad;C_sec_rad, it's an over-estimation""",
+    longDesc = 
+u"""
+\
+""",
+)
+
+entry(
+    index = 477,
+    label = "C_rad/H/CdCd;C_rad/H/CdCd",
+    kinetics = ArrheniusEP(
+        A = (4.79e+14, 'cm^3/(mol*s)'),
+        n = -0.75,
+        alpha = 0,
+        E0 = (0, 'kcal/mol'),
+        Tmin = (300, 'K'),
+        Tmax = (1500, 'K'),
+    ),
+    rank = 5,
+    shortDesc = u"""Copied from C_pri_rad;C_sec_rad, it's an over-estimation""",
+    longDesc = 
+u"""
+\
+""",
+)
+
+entry(
     index = 478,
     label = "C_pri_rad;C_ter_rad",
     kinetics = ArrheniusEP(
