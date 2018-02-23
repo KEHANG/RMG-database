@@ -1644,16 +1644,15 @@ entry(
 entry(
     index = 110,
     label = "Cds-HH_Cds-CbH;CsJ-CsHH",
-    kinetics = ArrheniusEP(
-        A = (782, 'cm^3/(mol*s)'),
-        n = 2.41,
-        alpha = 0,
-        E0 = (3.71, 'kcal/mol'),
-        Tmin = (300, 'K'),
-        Tmax = (1500, 'K'),
+    kinetics = Arrhenius(
+        A = (236.006, 'cm^3/(mol*s)'),
+        n = 2.7878,
+        Ea = (15.4228, 'kJ/mol'),
+        T0 = (1, 'K'),
     ),
-    rank = 4,
-    shortDesc = u"""Aaron Vandeputte GAVs CBS-QB3""",
+    rank = 3,
+    shortDesc = u"""kinetics calculated by Lawrence Lai under the CBS-QB3 level of theory, 2016
+More information can be found on pharos ~laitcl/Gaussian/HxBUpdated""",
 )
 
 entry(
